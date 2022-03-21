@@ -1,15 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import { Provider } from "react-redux";
+import { store } from "./store/configureStore";
 
-import LoginView from './components/login';
+import MainApp from './components/MainApp';
 
 function App() {
-  return (
+  return <Provider store={store}>
     <div className="App d-flex justify-content-center align-items-center">
-      <LoginView/>
+      <MainApp/>
     </div>
-  );
+    </Provider>;
 }
 
 export default App;
